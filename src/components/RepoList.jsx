@@ -5,6 +5,8 @@ import { useEffect, useState } from "react";
 const RepoList = () => {
   const [repos, setRepos] = useState([]);
   const [search, setSearch] = useState("");
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const username = "vercel";
@@ -24,6 +26,15 @@ const RepoList = () => {
   const filteredRepos = repos.filter((repo) =>
     repo.name.toLowerCase().includes(search.toLowerCase()),
   );
+
+  if (loading) {
+    return <p>Loading repositories...</p>;
+  }
+
+  if (error) {
+    return <p className="error">{error}</p>;
+  }
+
   return (
     <main className="main-repo-container">
       <h1 className="heading">GitHub Repositories</h1>
