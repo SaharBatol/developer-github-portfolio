@@ -32,6 +32,13 @@ body {
   margin-bottom: 1rem;
 }
 
+.subheading {
+  color: hsl(217, 12%, 63%);
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
 card-heading {
   color: hsl(213, 19%, 18%);
   font-size: 1.3rem;
@@ -58,4 +65,14 @@ card-heading {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(15.5rem, 1fr));
   gap: 1rem;
+}
+
+#search-bar {
+  width: 20rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.2s ease;
+  margin-bottom: 1.5rem;
 }
